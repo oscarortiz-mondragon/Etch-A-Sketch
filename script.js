@@ -2,13 +2,19 @@ let container = document.querySelector("#container")
 let divCount = container.getElementsByTagName("div")
 
 
+  
 container.style.cssText = "display:grid; margin: auto;height: 560px; width:500px;grid-gap:1px; grid-template-rows: repeat(16,1fr); grid-template-columns:repeat(16,1fr);"
   for(let i = 0; i < 256; i++)
       {
         let div = document.createElement('div')
         div.style.cssText = "background-color:green"
         div.id = "default-grid" 
+        div.addEventListener("mouseenter", changeColor=>{
+          for(let i = 0; i < 256; i++){
+          div.style.cssText = `background-color: rgb(${red},${green},${blue});`
+        }})
         container.appendChild(div)
+        
       }
       
 // console.log(divCount.length)
@@ -27,8 +33,12 @@ let button = document.getElementById("Shake")
                 let div = document.createElement('div')
                 div.id = "default-grid"
                 div.style.cssText = "background-color:green;"
+                div.addEventListener("mouseenter", changeColor=>{
+                  for(let i = 0; i < 256; i++){
+                  div.style.cssText = `background-color: rgb(${red},${green},${blue});`
+                }})
                 container.appendChild(div)
-                div.addEventListener("mousenter",changeColor)
+                
               }
             
           }
