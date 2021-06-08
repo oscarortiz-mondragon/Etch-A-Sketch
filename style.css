@@ -1,23 +1,122 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.6;
+}
+html {
+  background-color: black;
 }
 
-.button{
-   padding: 10px;
-   color: red;
-   margin-left: 0;
-}
-input{
+input {
   display: flex;
   margin: auto;
 }
-.NewGrid .shake{
-  margin: auto;
-  padding: 100px;
-  
+#Shake {
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
 }
+h1 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  font-family: monospace;
+  color: white;
+}
+span {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: radial-gradient(red, yellow);
+  background-size: 100%;
+  color: peru;
+  font-size: 4rem;
+  animation: bounce 1s infinite;
+}
+span:hover {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: radial-gradient(red, yellow);
+  background-size: 100%;
+  color: peru;
+  animation: move 1s infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(0.2rem);
+  }
+  20% {
+    transform: translateY(0.4rem);
+  }
+  30% {
+    transform: translateY(0.6rem);
+  }
+  40% {
+    transform: translateY(0.8rem);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+  60% {
+    transform: translateY(0.8rem);
+  }
+  70% {
+    transform: translateY(0.6rem);
+  }
+  80% {
+    transform: translateY(0.4rem);
+  }
+  90% {
+    transform: translateY(0.2rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateY(0px);
+    background-size: 100%;
+  }
+  10% {
+    transform: translateY(0.2rem);
+  }
+  20% {
+    transform: translateY(0.4rem);
+  }
 
+  30% {
+    transform: translateY(0.6rem);
+  }
+  40% {
+    transform: translateY(0.8rem);
+  }
+  50% {
+    transform: translateY(1rem);
+    background-size: 200%;
+  }
+  60% {
+    transform: translateY(0.8rem);
+  }
+  70% {
+    transform: translateY(0.6rem);
+  }
 
-
- 
+  80% {
+    transform: translateY(0.4rem);
+  }
+  90% {
+    transform: translateY(0.2rem);
+  }
+  100% {
+    transform: translateY(0rem);
+    background-size: 100%;
+  }
+}
